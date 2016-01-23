@@ -1,6 +1,6 @@
 {
   "name": "redux-restore",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "saves data to AsyncStorage in react-native",
   "main": "index.js",
   "scripts": {

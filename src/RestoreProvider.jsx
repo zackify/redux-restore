@@ -11,6 +11,10 @@ class RestoreProvider extends React.Component {
   componentWillMount() {
     restore(this.props.store)
     .then(() => this.setState({ loaded: true }))
+    .catch(error => {
+      console.error(error)
+      this.setState({loaded: true})
+    })
   }
 
   render() {

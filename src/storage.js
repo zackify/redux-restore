@@ -5,7 +5,7 @@ const storage = keys => {
     next(action)
     let state = store.getState()
     for(let item in state) {
-      if(keys.includes(item)) AsyncStorage.setItem(item, JSON.stringify(state[item].toJS()))
+      if(keys.indexOf(item) > -1) AsyncStorage.setItem(item, JSON.stringify(state[item].toJS()))
     }
   }
 }
