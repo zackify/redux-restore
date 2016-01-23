@@ -30,7 +30,7 @@ Pass an array with reducer names. Each one you pass will be saved to storage.
 
 ###Use RestoreProvider
 
-Use this instead of the usual `Provider` from redux.
+Use this instead of the usual `Provider` from redux. When you load the app, it will dispatch from storage with the current state, if there is any.
 
 ```js
 import React from 'react-native'
@@ -48,6 +48,18 @@ export default class App extends React.Component {
   }
 }
 ```
+
+###Add an action to your reducer
+
+```js
+case 'authentication':
+  delete action.type
+  return Immutable.Map(action)
+```
+
+Create a new case with the name of your reducer. This will be called with all of the stored state.
+
+That's it! You're all set!
 
 ###Conclusion
 
