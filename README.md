@@ -2,6 +2,12 @@
 
 This is a simple wrapper around async storage that saves your store data to `AsyncStorage` in react native. Works with Android and iOS! Tested on `0.18`
 
+##Install
+
+```js
+npm install redux-restore --save
+```
+
 ##Setup
 
 ###Register Middleware
